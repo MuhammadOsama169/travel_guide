@@ -1,5 +1,15 @@
 import Image from 'next/image';
 import Line from '../public/llline.svg';
+import Skeleton from '@/components/Skeleton';
+import { cityData } from './models/seed';
+
+type Props = {
+  className?: string;
+  controls?: boolean;
+  src: string;
+  type: string;
+  loop: string | string;
+};
 
 export default function Home() {
   return (
@@ -10,12 +20,13 @@ export default function Home() {
       <Image
         src={Line}
         alt="line"
-        className="absolute h-[250px] md:left-[692px] md:top-[160px] left-[50px] top-[223px]"
+        className="md:absolute md:flex h-[250px] md:left-[692px] md:top-[160px] left-[50px] top-[223px] hidden"
       />
       <p className="mt-10 md:text-xl text-lg relative text-center">
         Unlock a World of Inspiration with Handcrafted Destination Guides byYour
         Favorite Creators
       </p>
+      <Skeleton cityData={cityData} />
     </main>
   );
 }
