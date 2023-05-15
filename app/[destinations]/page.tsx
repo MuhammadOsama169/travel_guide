@@ -7,20 +7,26 @@ import arrowSvg from '../../public/arrow.svg';
 import hotelSvg from '../../public/hotel.svg';
 import beerSvg from '../../public/beer.svg';
 import Link from 'next/link';
-type Props = {};
 
-const Destination = () => {
+interface Props {
+  id: string;
+  title: string;
+  city: string;
+  cover: string;
+  src: string | number;
+}
+const Destination = ({ id, title, city, cover }: Props) => {
   const params = useParams();
   const selectedCity = cityData.find((city) => city.id === params.destinations);
-  console.log(locationData[1].media[2]);
+
   return (
     <main className="my-10">
       <div className="my-10 font-sans text-4xl font-bold text-center flex flex-col">
-        {selectedCity.title}
+        {selectedCity?.title}
       </div>
       <Video
         className="w-full rounded-[40px] h-[500px] "
-        src={selectedCity.cover}
+        src={selectedCity?.cover}
         type="video/mp4"
       />
       <div className="flex justify-center items-center">
@@ -42,10 +48,11 @@ const Destination = () => {
             <h1 className="font-sans text-2xl font-medium text-center">
               {locationData[0].title}
             </h1>
+            {/* <Slider /> */}
             <div className="p-10">
               <Video
                 className="w-full"
-                src={locationData[0].media[2]}
+                src={locationData[0].media}
                 type="video/mp4"
               />
               <h1 className="font-sans text-xl mt-10">
@@ -74,7 +81,7 @@ const Destination = () => {
                   </h1>
                   <Video
                     className="w-full"
-                    src={locationData[1].media[2]}
+                    src={locationData[1].media}
                     type="video/mp4"
                   />
                   <h1 className="font-sans text-xl mt-10">
@@ -104,7 +111,7 @@ const Destination = () => {
                   </h1>
                   <Video
                     className="w-full"
-                    src={locationData[2].media[0]}
+                    src={locationData[2].media}
                     type="video/mp4"
                   />
                   <h1 className="font-sans text-xl mt-10">

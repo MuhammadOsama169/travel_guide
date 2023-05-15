@@ -1,4 +1,20 @@
-export const cityData = [
+type CityData = {
+  id: string;
+  title: string;
+  city: string;
+  cover: string;
+};
+
+type LocationData = {
+  link: string;
+  title: string;
+  description: string;
+  type: string;
+  media: any;
+  images: any;
+};
+
+export const cityData: CityData[] = [
   {
     id: '4d713b95-4fb9-4c12-9ec6-sadvasdvasdv',
     title: 'Tokyo - The City That Never Sleeps',
@@ -64,7 +80,7 @@ export const cityData = [
   },
 ];
 
-export const locationData = [
+export const locationData: LocationData[] = [
   {
     link: 'https://www.google.com/search?q=best+bar+in+tokyo&oq=best+bar+in+&aqs=chrome.0.0i512l6j69i57j0i512l3.4604j0j7&sourceid=chrome&ie=UTF-8#rlimm=6114541142626704952',
     title:
@@ -73,11 +89,13 @@ export const locationData = [
       "Nestled in the heart of a bustling city, the best hotel in town offers a luxurious haven for discerning travelers. From the moment guests step through its grand entrance, they are transported into a world of elegance and sophistication. The hotel boasts exquisite architecture and stunning design, with every detail carefully crafted to create an unforgettable experience. From the opulent guest rooms and suites to the top-notch amenities and unparalleled service, every aspect of the hotel is designed to exceed expectations. With its prime location, guests have easy access to the city's best attractions, making it the perfect base for exploring all that this vibrant city has to offer. Whether you're traveling for business or pleasure, the best hotel in this city promises an exceptional stay that will leave you feeling pampered and rejuvenated.",
     type: 'Hotel',
     media: [
+      'https://ucarecdn.com/262b7069-d664-4671-8a3d-247e4c030d0a/pexelscottonbrostudio51380224096x216025fps.mp4',
+    ],
+    images: [
       'https://ucarecdn.com/916906c9-f54e-4898-b9ec-251f7e8ab52a/dushawnjovic0WLZQv3Id8unsplash.jpg',
       'https://ucarecdn.com/10e5a08f-7ee9-48cf-8786-b8eb9ce205d4/alevtakilTAW3H7NV5kunsplash.jpg',
-      'https://ucarecdn.com/262b7069-d664-4671-8a3d-247e4c030d0a/pexelscottonbrostudio51380224096x216025fps.mp4',
-      'https://ucarecdn.com/5a02fdd2-bccc-4468-b92f-85182ecbeeea/iliassamiHhuRZlAaPJ0unsplash.jpg',
       'https://ucarecdn.com/af5da431-4dda-4fe6-82f2-72840018be19/hotellalgarhfortandpalacevjYAvEFdRCounsplash.jpg',
+      'https://ucarecdn.com/5a02fdd2-bccc-4468-b92f-85182ecbeeea/iliassamiHhuRZlAaPJ0unsplash.jpg',
     ],
   },
   {
@@ -88,9 +106,11 @@ export const locationData = [
       "Looking for the perfect spot to unwind and indulge in a delicious cocktail? Look no further than the best bar in the city! Located in the heart of downtown, this sophisticated oasis is a haven for cocktail connoisseurs and those who appreciate a finely crafted drink. Step inside and you'll be transported to a world of elegance and refinement, with luxurious furnishings and a cozy ambiance that invites you to sit back, relax, and savor every sip. The bar's expert mixologists use only the finest ingredients to create a wide variety of classic and inventive cocktails, each one perfectly balanced and bursting with flavor. Whether you prefer a refreshing gin and tonic or a bold and complex whiskey sour, you're sure to find your new favorite drink at the best bar in the city. So why wait? Grab a seat, raise a glass, and toast to the good life!",
     type: 'Bar',
     media: [
+      'https://ucarecdn.com/9c2c55b8-25c6-4a48-86ec-35b10f54adf3/pexelsfreevideos8541281920x108025fps.mp4',
+    ],
+    images: [
       'https://ucarecdn.com/c31d98ae-77ec-4b14-a2d2-bb4d2738f389/aleksandrpopov2GNBoMgKYEounsplash.jpg',
       'https://ucarecdn.com/39ec7d9a-2b57-49b3-a3bc-69412db88106/patricktomassoGXXYkSwndP4unsplash.jpg',
-      'https://ucarecdn.com/9c2c55b8-25c6-4a48-86ec-35b10f54adf3/pexelsfreevideos8541281920x108025fps.mp4',
     ],
   },
   {
@@ -102,6 +122,8 @@ export const locationData = [
     type: 'Beach',
     media: [
       'https://ucarecdn.com/c7414c37-d445-4720-8efd-2f7d5e560557/pexelstarynelliott33270581920x108024fps.mp4',
+    ],
+    images: [
       'https://ucarecdn.com/325f7b1f-1be4-4e5d-b680-ed0375d8918f/benjaminvorosAD6rn3vqG7ounsplash.jpg',
       'https://ucarecdn.com/3ac55893-fe60-403a-b304-240bc98e3cbf/gaddafirusli2ueUnL4CkV8unsplash.jpg',
       'https://ucarecdn.com/69eb5379-3908-4c31-8fe2-ca9448f52315/seanoulashinKMn4VEeEPR8unsplash.jpg',

@@ -3,15 +3,17 @@ import Line from '../public/llline.svg';
 import Skeleton from '@/components/Skeleton';
 import { cityData } from './models/seed';
 
-type Props = {
-  className?: string;
-  controls?: boolean;
-  src: string;
-  type: string;
-  loop: string | string;
+type CityData = {
+  id: string;
+  title: string;
+  city: string;
+  cover: string;
+};
+type HomeProps = {
+  cityData: CityData[];
 };
 
-export default function Home() {
+export default function Home({ cityData }: HomeProps) {
   return (
     <main className="flex min-h-screen flex-col items-center md:mt-10 mt-20 md:px-0 px-10">
       <h1 className="font-sans md:text-5xl text-2xl font-bold tracking-wider text-center">
