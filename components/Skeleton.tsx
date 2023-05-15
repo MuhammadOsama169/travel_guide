@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 import { cityData } from '../app/models/seed';
 import Video from './Video';
 import Link from 'next/link';
 
-type Props = {};
-
-const Skeleton = (props: Props) => {
+type CityData = {
+  id: string;
+  title: string;
+  city: string;
+  cover: string;
+};
+const Skeleton = ({ title, cover, id, city }: CityData) => {
   return (
     <div className="md:max-w-[1200px] my-[200px] grid grid-cols-3 gap-[50px] rounded-lg ">
       {cityData?.map((city) => (

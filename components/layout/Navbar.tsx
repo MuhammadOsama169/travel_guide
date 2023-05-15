@@ -5,14 +5,7 @@ import Image from 'next/image';
 import logo from '../../public/logo.png';
 import Link from 'next/link';
 
-interface NavbarProps extends Props {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}
-
-export const Navbar = ({ src, alt, width, height }: NavbarProps) => {
+export const Navbar = () => {
   const [providers, setProviders] = React.useState(null);
 
   const { data: session } = useSession();
@@ -44,7 +37,7 @@ export const Navbar = ({ src, alt, width, height }: NavbarProps) => {
         <div className="sm:flex hidden">
           {session?.user ? (
             <div className="flex gap-3 md:gap-5 items-center">
-              <Link href="/create-prompt" className="">
+              <Link href="/create" className="">
                 Create Post
               </Link>
 
