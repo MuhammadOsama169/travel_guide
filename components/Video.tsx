@@ -5,25 +5,10 @@ type Props = {
   controls?: boolean;
   src: string;
   type: string;
-  loop: boolean;
-  autoPlay: boolean;
 };
 
-const Video = ({
-  className,
-  controls = false,
-  src,
-  type,
-  loop,
-  autoPlay,
-}: Props) => (
-  <video
-    className={className}
-    controls={controls}
-    muted
-    autoPlay={true}
-    loop={true}
-  >
+const Video = ({ className, controls = false, src, type }: Props) => (
+  <video className={className} controls={controls} muted autoPlay loop>
     <source src={src} type={type} />
   </video>
 );

@@ -28,7 +28,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Provider.tsx"
+    "components/AuthProvider.tsx",
+    "app/api/submit/new/route.js",
+    "app/api/submit.js",
+    "app/api/blogs/route.ts"
   ],
   "exclude": ["node_modules"]
 }

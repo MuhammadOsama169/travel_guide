@@ -3,15 +3,9 @@ import { cityData } from '../app/models/seed';
 import Video from './Video';
 import Link from 'next/link';
 
-type CityData = {
-  id: string;
-  title: string;
-  city: string;
-  cover: string;
-};
-const Skeleton = ({ title, cover, id, city }: CityData) => {
+const Skeleton = () => {
   return (
-    <div className="md:max-w-[1200px] my-[200px] grid grid-cols-3 gap-[50px] rounded-lg ">
+    <div className="md:max-w-[1200px] my-10 lg:my-[150px] md:my-[100px] grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[50px] rounded-lg ">
       {cityData?.map((city) => (
         <div key={city.id} className="relative hover:opacity-[0.85]">
           <Link href={`${city.id}`}>

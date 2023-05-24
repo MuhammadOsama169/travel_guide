@@ -4,21 +4,12 @@ import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 import Image from 'next/image';
 import logo from '../../public/logo.png';
 import Link from 'next/link';
+import { SignInButton, SignOutButton } from '../buttons';
 
 export const Navbar = () => {
-  const [providers, setProviders] = React.useState(null);
-
   const { data: session } = useSession();
 
   const [isMenuToggled, setMenuToggled] = React.useState<boolean>(false);
-
-  useEffect(() => {
-    const setUpProviders = async () => {
-      const response = await getProviders();
-      setProviders(response);
-    };
-    setUpProviders();
-  }, []);
 
   const handleClick = () => {
     setMenuToggled(!isMenuToggled);
@@ -40,10 +31,9 @@ export const Navbar = () => {
               <Link href="/create" className="">
                 Create Post
               </Link>
+              <Link href="/submissions">Your Submissions</Link>
 
-              <button type="button" onClick={signOut} className="">
-                Sign Out
-              </button>
+              <SignOutButton />
               <Image
                 src={session?.user.image}
                 width={37}
@@ -54,19 +44,7 @@ export const Navbar = () => {
             </div>
           ) : (
             <>
-              {providers &&
-                Object.values(providers).map((provider) => (
-                  <button
-                    type="button"
-                    key={provider.name}
-                    onClick={() => {
-                      signIn(provider.id);
-                    }}
-                    className=" md:mr-10"
-                  >
-                    Sign in
-                  </button>
-                ))}
+              <SignInButton />
             </>
           )}
         </div>
@@ -113,21 +91,12 @@ export const Navbar = () => {
 
             <div className="flex flex-col text-white justify-center mx-auto items-center text-xl gap-5 pt-10">
               <Link href={'/'}>Home</Link>
-              {session?.user ? (
-                <Link
-                  href={'/signIn'}
-                  className="rounded-lg bg-black text-white flex items-center px-5 py-2"
-                >
-                  Sing Out
-                </Link>
-              ) : (
-                <Link
-                  href={'/signIn'}
-                  className="rounded-lg bg-black text-white flex items-center px-5 py-2"
-                >
-                  Sing In
-                </Link>
-              )}
+              <Link href="/create" className="">
+                Create Post
+              </Link>
+              <Link href="/submissions">Your Submissions</Link>
+
+              {session?.user ? <SignOutButton /> : <SignInButton />}
             </div>
           </div>
         )}
