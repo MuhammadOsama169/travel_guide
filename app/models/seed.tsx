@@ -40,43 +40,49 @@ export const cityData: CityData[] = [
     id: '45b8a437-7a9a-44b3-a2ee-asdvasdvsa',
     title: 'London - The City of History and Royalty',
     city: 'London',
+
     cover:
-      'https://ucarecdn.com/38cde67c-e664-445e-947f-47ab951c5f13/pexelsvladakarpovich80451641080x192050fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215251/pexels-boyan-minchev-14092880-720x1280-60fps_dtfvea.mp4',
   },
   {
     id: '53a5da5f-6405-42e3-8e5f-asdvasdvasvdasvd',
     title: 'Dubai - The City of Luxury and Innovation',
     city: 'Dubai',
+
     cover:
-      'https://ucarecdn.com/8ba376ba-0246-4e62-a407-3e76e6eb268a/pexelspeggyanke53485151080x192030fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215236/pexels-tima-miroshnichenko-7172081-720x1280-25fps_kj74vi.mp4',
   },
   {
     id: 'e569a7e1-8370-4b1f-9a39-asdvasdvasdva',
     title: 'Sydney - The City Down Under',
     city: 'Sydney',
+
     cover:
-      'https://ucarecdn.com/b764ed44-41d0-4c65-a72a-9258fd74f796/pexelscottonbrostudio53296132160x409625fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215248/pexels-yaroslav-shuraev-4434242-720x1280-24fps_bv6iuu.mp4',
   },
   {
     id: '0d27e9c9-0d24-472c-a1b5-asdadfasdvasdvasdasfd',
     title: 'Rio de Janeiro - The City of Samba and Sun',
     city: 'Rio de Janeiro',
+
     cover:
-      'https://ucarecdn.com/0572f205-73d9-4028-9ed0-2c7cb531259c/pexelscottonbrostudio51989562160x409625fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215244/pexels-yaroslav-shuraev-4762777-720x1366-24fps_nae5xe.mp4',
   },
   {
     id: '0d27e9c9-0d24-47sdfsd2c-a1b5-asdsadvasdvfasdfasdf',
     title: "Moscow: A Glimpse into Russia's Imperial Past and Modern Present",
     city: 'Moscow, Russia',
+
     cover:
-      'https://ucarecdn.com/af6feab8-5c04-44c1-8563-655146836c3e/pexelscottonbrostudio51382142160x409625fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215902/pexels-pavel-danilyuk-4812234-720x1280-30fps_ihd4bh.mp4',
   },
   {
     id: '0d27easd9c9-0d24-47sdfsd2c-a1b5-asasdvasdvdfasdfasd',
-    title: 'Sydney: Surf, Sunsets, and Sights on the Australian Coast',
-    city: 'Sydney, Australia',
+    title: 'Venice, the Floating City of Italy',
+    city: 'Italy, Venice',
+
     cover:
-      'https://ucarecdn.com/dd1c8b8c-2398-4621-8b96-895a83af940e/pexelsromanodintsov65203072160x374430fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215240/pexels-max-avans-5057325-720x1280-25fps_vsvozl.mp4',
   },
 ];
 
@@ -89,7 +95,7 @@ export const locationData: LocationData[] = [
       "Nestled in the heart of a bustling city, the best hotel in town offers a luxurious haven for discerning travelers. From the moment guests step through its grand entrance, they are transported into a world of elegance and sophistication. The hotel boasts exquisite architecture and stunning design, with every detail carefully crafted to create an unforgettable experience. From the opulent guest rooms and suites to the top-notch amenities and unparalleled service, every aspect of the hotel is designed to exceed expectations. With its prime location, guests have easy access to the city's best attractions, making it the perfect base for exploring all that this vibrant city has to offer. Whether you're traveling for business or pleasure, the best hotel in this city promises an exceptional stay that will leave you feeling pampered and rejuvenated.",
     type: 'Hotel',
     media: [
-      'https://ucarecdn.com/262b7069-d664-4671-8a3d-247e4c030d0a/pexelscottonbrostudio51380224096x216025fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215240/pexels-cottonbro-studio-5138022-2048x1080-25fps_ecivlo.mp4',
     ],
     images: [
       'https://ucarecdn.com/916906c9-f54e-4898-b9ec-251f7e8ab52a/dushawnjovic0WLZQv3Id8unsplash.jpg',
@@ -106,7 +112,7 @@ export const locationData: LocationData[] = [
       "Looking for the perfect spot to unwind and indulge in a delicious cocktail? Look no further than the best bar in the city! Located in the heart of downtown, this sophisticated oasis is a haven for cocktail connoisseurs and those who appreciate a finely crafted drink. Step inside and you'll be transported to a world of elegance and refinement, with luxurious furnishings and a cozy ambiance that invites you to sit back, relax, and savor every sip. The bar's expert mixologists use only the finest ingredients to create a wide variety of classic and inventive cocktails, each one perfectly balanced and bursting with flavor. Whether you prefer a refreshing gin and tonic or a bold and complex whiskey sour, you're sure to find your new favorite drink at the best bar in the city. So why wait? Grab a seat, raise a glass, and toast to the good life!",
     type: 'Bar',
     media: [
-      'https://ucarecdn.com/9c2c55b8-25c6-4a48-86ec-35b10f54adf3/pexelsfreevideos8541281920x108025fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215236/pexels-free-videos-854128-1920x1080-25fps_htjek5.mp4',
     ],
     images: [
       'https://ucarecdn.com/c31d98ae-77ec-4b14-a2d2-bb4d2738f389/aleksandrpopov2GNBoMgKYEounsplash.jpg',
@@ -121,7 +127,7 @@ export const locationData: LocationData[] = [
       "Escape the hustle and bustle of city life and discover the best beach in town! This serene oasis is a true hidden gem, with crystal clear waters and white sandy shores that will transport you to a tropical paradise. Located just a short drive from the city, the beach offers a peaceful respite from the urban chaos, with plenty of space to spread out and relax. Whether you're looking to soak up the sun, take a refreshing swim, or simply enjoy a leisurely stroll along the shore, the best beach in the city has something for everyone. With its tranquil atmosphere and breathtaking views, it's the perfect place to unwind and recharge your batteries. So pack your sunscreen, grab a beach towel, and get ready to experience the ultimate in relaxation and natural beauty at the best beach in town.",
     type: 'Beach',
     media: [
-      'https://ucarecdn.com/c7414c37-d445-4720-8efd-2f7d5e560557/pexelstarynelliott33270581920x108024fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685215267/pexels-videographer-shiyaz-4069480-1920x1080-50fps_nh5cio.mp4',
     ],
     images: [
       'https://ucarecdn.com/325f7b1f-1be4-4e5d-b680-ed0375d8918f/benjaminvorosAD6rn3vqG7ounsplash.jpg',

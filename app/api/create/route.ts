@@ -5,7 +5,8 @@ import prisma from '../../../lib/prisma';
 
 export async function POST(request: Request) {
   const data = await request.json();
-  const { title, content, userId } = data;
+
+  const { title, content, userId,image } = data;
 
   let user = await prisma.user.findUnique({ where: { id: userId } });
 
@@ -19,6 +20,7 @@ export async function POST(request: Request) {
         title,
         content,
         userId: user.id,
+        image,
       },
     });
 

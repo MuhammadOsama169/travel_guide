@@ -2,7 +2,11 @@ import { PostSkeleton } from '../../components/PostSkeleton';
 import React from 'react';
 
 const getPostData = async () => {
-  const res = await fetch('http://localhost:3000/api/create');
+  const res = await fetch('http://localhost:3000/api/create', {
+    headers: {
+      'Cache-Control': 'no-cache',
+    },
+  });
   return res.json();
 };
 
