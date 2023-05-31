@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Skeleton = () => {
   return (
-    <div className="md:max-w-[1200px] my-10 lg:my-[150px] md:my-[100px] grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[50px] rounded-lg ">
+    <div className="md:max-w-[1080px] my-10 lg:my-[150px] md:my-[100px] grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[50px] rounded-lg ">
       {cityData?.map((city) => (
         <div key={city.id} className="relative hover:opacity-[0.85]">
           <Link href={`${city.id}`}>
@@ -15,7 +15,9 @@ const Skeleton = () => {
               type="video/mp4"
             />
             <div className="absolute bottom-10 left-0 mt-5 w-full text-white font-bold px-10 ">
-              <div className="text-2xl font-sans font-light">{city.title}</div>
+              <div className="text-2xl font-sans font-light mx-auto">
+                {city.title}
+              </div>
               {/* reviews */}
               <div className="flex px-5 mt-5 ">
                 <svg

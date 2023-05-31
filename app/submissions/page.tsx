@@ -3,27 +3,38 @@ import React from 'react';
 
 const getPostData = async () => {
   const res = await fetch('http://localhost:3000/api/create', {
-    headers: {
-      'Cache-Control': 'no-cache',
-    },
+    cache: 'no-store',
   });
-  return res.json();
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch post data. Status: ${res.status}`);
+  }
+
+  const data = await res.json();
+  return data;
 };
 
 export default async function getAllPosts() {
-  const posts = await getPostData();
+  try {
+    const posts = await getPostData();
 
-  return (
-    <section>
-      {posts.map((post, i) => (
-        <div key={i}>
-          <PostSkeleton
-            title={post.title}
-            content={post.content}
-            createdAt={post.createdAt}
-          />
-        </div>
-      ))}
-    </section>
-  );
+    return (
+      <section>
+        {posts?.map((post, i) => (
+          <div key={i}>
+            <PostSkeleton
+              title={post.title}
+              content={post.content}
+              createdAt={post.createdAt}
+              image={post.image}
+            />
+          </div>
+        ))}
+      </section>
+    );
+  } catch (error) {
+    console.error(error);
+    // Handle the error gracefully, e.g., show an error message
+    return <div>Error occurred while fetching posts.</div>;
+  }
 }

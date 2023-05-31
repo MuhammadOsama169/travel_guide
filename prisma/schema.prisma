@@ -13,9 +13,9 @@ model Post {
   title     String
   content   String?
   published Boolean  @default(false)
-  userId    String
-  image     String?
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String?
+  image     String[]
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 //Next Auth docs

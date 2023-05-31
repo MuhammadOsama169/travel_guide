@@ -20,21 +20,21 @@ export const cityData: CityData[] = [
     title: 'Tokyo - The City That Never Sleeps',
     city: 'Tokyo',
     cover:
-      'https://ucarecdn.com/c77e27af-14d9-40ac-8d31-b6b82555b444/pexelsyaroslavshuraev44341362160x384030fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685517902/pexels-dlkr-10929150-1060x1886-30fps_x9dfl2.mp4',
   },
   {
     id: '3ed2e2c8-4980-4ccf-b87f-asdvasdvasv',
     title: 'New York - The City of Dreams',
     city: 'New York',
     cover:
-      'https://ucarecdn.com/0c5037f1-961f-46b8-8b1b-701113e91410/pexelsfeyzayldrm143885262160x409625fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685518088/pexels-yaroslav-shuraev-4434136-2160x3840-30fps_rsyskq.mp4',
   },
   {
     id: '186a3b46-7d2f-4c77-9a9b-asdvasdvasvda',
     title: 'Paris - The City of Love',
     city: 'Paris',
     cover:
-      'https://ucarecdn.com/91db13aa-aa62-4a89-8339-48158da6d298/pexelspeggyanke67849101080x192030fps.mp4',
+      'https://res.cloudinary.com/dcxx6ihq2/video/upload/v1685518233/pexels-meghna-aggarwal-6624966-1080x1920-43fps_ywuc1j.mp4',
   },
   {
     id: '45b8a437-7a9a-44b3-a2ee-asdvasdvsa',

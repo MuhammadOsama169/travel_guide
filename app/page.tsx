@@ -25,8 +25,8 @@ export default function Home({ cityData }: HomeProps) {
         className="md:absolute lg:flex h-[250px] md:left-[692px] md:top-[160px] left-[50px] top-[223px] hidden"
       />
       <p className="mt-10 md:text-xl text-lg relative text-center">
-        Unlock a World of Inspiration with Handcrafted Destination Guides byYour
-        Favorite Creators
+        Unlock a World of Inspiration with Handcrafted Destination Guides by
+        Your Favorite Creators
       </p>
       <Skeleton cityData={cityData} />
     </main>
