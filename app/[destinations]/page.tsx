@@ -8,14 +8,7 @@ import hotelSvg from '../../public/hotel.svg';
 import beerSvg from '../../public/beer.svg';
 import Link from 'next/link';
 
-interface Props {
-  id: string;
-  title: string;
-  city: string;
-  cover: string;
-  src: string | number;
-}
-const Destination = ({ id, title, city, cover }: Props) => {
+const Destination = () => {
   const params = useParams();
   const selectedCity = cityData.find((city) => city.id === params.destinations);
 

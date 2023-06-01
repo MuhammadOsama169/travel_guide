@@ -25,7 +25,7 @@ export default function FormSubmit() {
   const handleChange = (e) => {
     const title = e.target.title;
 
-    const userId = session?.user.id;
+    const userId = session?.user?.id;
 
     setState((prevData) => ({
       ...prevData,

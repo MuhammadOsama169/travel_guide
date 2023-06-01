@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import useMediaQuery from '../hooks/useMediaQueries';
 
 interface IPROPS {
   title: string;
@@ -10,7 +9,7 @@ interface IPROPS {
   image: string;
 }
 
-export const PostSkeleton = ({ title, content, createdAt, image }) => {
+export const PostSkeleton = ({ title, content, createdAt, image }: IPROPS) => {
   const formattedDate = new Date(createdAt).toLocaleString(undefined, {
     year: 'numeric',
     month: 'long',

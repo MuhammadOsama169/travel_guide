@@ -1,5 +1,3 @@
-import { PrismaClient } from '@prisma/client';
-import { Url } from 'url';
 import prisma from '../lib/prisma'
 import { v4 as uuidv4 } from 'uuid';
 
