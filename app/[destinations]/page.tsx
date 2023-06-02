@@ -19,7 +19,7 @@ const Destination = () => {
       </div>
       <Video
         className="w-full rounded-[40px] h-[500px] "
-        src={selectedCity?.cover}
+        src={selectedCity?.cover || ''}
         type="video/mp4"
       />
       <div className="flex justify-center items-center">
@@ -45,7 +45,7 @@ const Destination = () => {
             <div className="p-10">
               <Video
                 className="w-full"
-                src={locationData[0].media}
+                src={locationData[0].media[0] || ''}
                 type="video/mp4"
               />
               <h1 className="font-sans text-xl mt-10">
@@ -74,7 +74,7 @@ const Destination = () => {
                   </h1>
                   <Video
                     className="w-full"
-                    src={locationData[1].media}
+                    src={locationData[1].media[0] || ''}
                     type="video/mp4"
                   />
                   <h1 className="font-sans text-xl mt-10">
@@ -104,7 +104,7 @@ const Destination = () => {
                   </h1>
                   <Video
                     className="w-full"
-                    src={locationData[2].media}
+                    src={locationData[2].media[0] || ''}
                     type="video/mp4"
                   />
                   <h1 className="font-sans text-xl mt-10">

@@ -1,20 +1,4 @@
-type CityData = {
-  id: string;
-  title: string;
-  city: string;
-  cover: string;
-};
-
-type LocationData = {
-  link: string;
-  title: string;
-  description: string;
-  type: string;
-  media: any;
-  images: any;
-};
-
-export const cityData: CityData[] = [
+export const cityData = [
   {
     id: '4d713b95-4fb9-4c12-9ec6-sadvasdvasdv',
     title: 'Tokyo - The City That Never Sleeps',
@@ -86,7 +70,7 @@ export const cityData: CityData[] = [
   },
 ];
 
-export const locationData: LocationData[] = [
+export const locationData = [
   {
     link: 'https://www.google.com/search?q=best+bar+in+tokyo&oq=best+bar+in+&aqs=chrome.0.0i512l6j69i57j0i512l3.4604j0j7&sourceid=chrome&ie=UTF-8#rlimm=6114541142626704952',
     title:
