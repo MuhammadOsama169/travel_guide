@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, FormEvent } from 'react';
 import { useSession } from 'next-auth/react';
 import placeholderImage from '../../public/placeholder-image.png';
 import createDestinationImg from '../../public/travel-destination.jpg';
@@ -68,7 +68,7 @@ export default function FormSubmit() {
 
     // Send data to API route
     if (imageFile.length > 10) {
-      const res = await fetch('http://localhost:3000/api/create', {
+      const res = await fetch(`${process.env.BASE_URL}/api/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
