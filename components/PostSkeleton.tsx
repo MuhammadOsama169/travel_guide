@@ -6,7 +6,7 @@ interface IPROPS {
   title: string;
   content: string;
   createdAt: string | number;
-  image: string;
+  image: string[];
 }
 
 export const PostSkeleton = ({ title, content, createdAt, image }: IPROPS) => {

@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import logo from '../../public/logo.png';
@@ -51,55 +52,64 @@ export const Navbar = () => {
       </nav>
 
       {/* Mobile view */}
-      <nav className="w-full sm:hidden flex md:justify-start justify-between items-center md:ml-5 mt-10 mx-auto px-10">
-        <Image src={logo} alt="logo" className="w-auto h-[50px]" />
+
+      <nav className="w-full sm:hidden flex md:justify-start justify-between items-center md:ml-5 mt-10 mx-auto md:px-10 px-5">
+        <div className="flex justify-start mx-auto">
+          <Image src={logo} alt="logo" className="w-auto h-[50px]" />
+        </div>
+
         {/* Hamburger icon */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6"
-          onClick={handleClick}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-        {isMenuToggled && (
-          <div className="fixed right-0 top-0 h-[250px] bg-[#454343] w-[200px]  z-40 rounded-l-lg border-black py-10">
-            <div className="flex flex-row-reverse justify-items-end px-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="white"
-                className="w-6 h-6"
-                onClick={handleClick}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </div>
+        <div className="flex justify-end">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+            onClick={handleClick}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
 
-            <div className="flex flex-col text-white justify-center mx-auto items-center text-xl gap-5 pt-10">
-              <Link href={'/'}>Home</Link>
-              <Link href="/create" className="">
-                Create Post
-              </Link>
-              <Link href="/submissions">Your Submissions</Link>
+        <motion.div animate={{ opacity: isMenuToggled ? 1 : 0 }}>
+          {isMenuToggled && (
+            <div className="fixed right-0 top-0 h-[350px] bg-[#454343] w-[200px]  z-40 rounded-l-lg border-black py-10">
+              <div className="flex flex-row-reverse justify-items-end px-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="white"
+                  className="w-6 h-6"
+                  onClick={handleClick}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
 
-              {session?.user ? <SignOutButton /> : <SignInButton />}
+              <div className="flex flex-col text-white justify-center mx-auto items-center text-xl gap-5 pt-10">
+                <Link href={'/'}>Home</Link>
+                <Link href="/create" className="">
+                  Create Post
+                </Link>
+                <Link href="/submissions">Your Submissions</Link>
+
+                {session?.user ? <SignOutButton /> : <SignInButton />}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </motion.div>
       </nav>
     </>
   );
