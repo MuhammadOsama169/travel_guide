@@ -32,9 +32,10 @@ export const PostSkeleton = ({ title, content, createdAt, image }: IPROPS) => {
                 <Image
                   alt="gallery"
                   src={image}
-                  width={300}
-                  height={300}
-                  className="rounded-md min-h-full hover:scale-[1.2] transition-all"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-[300px] h-[200px] rounded-md  hover:scale-[1.2] transition-all"
                 />
               </Link>
             </div>

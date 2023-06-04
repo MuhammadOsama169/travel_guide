@@ -67,23 +67,21 @@ export default function FormSubmit() {
     const { title, content, userId, image } = state;
 
     // Send data to API route
-    if (imageFile.length > 10) {
-      const res = await fetch(`${process.env.BASE_URL}/api/create`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          title,
-          content,
-          userId,
-          image,
-        }),
-      });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/create`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title,
+        content,
+        userId,
+        image,
+      }),
+    });
 
-      const result = await res.json();
-      router.push('/submissions');
-    }
+    const result = await res.json();
+    router.push('/submissions');
   };
 
   const content = (
