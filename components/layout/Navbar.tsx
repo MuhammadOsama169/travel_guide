@@ -28,12 +28,11 @@ export const Navbar = () => {
 
         <div className="sm:flex hidden">
           {session?.user ? (
-            <div className="flex gap-3 md:gap-5 items-center">
+            <div className="flex gap-3 md:gap-5 items-center px-5">
               <Link href="/create" className="">
                 Create Post
               </Link>
               <Link href="/submissions">Your Submissions</Link>
-
               <SignOutButton />
               <Image
                 src={session?.user.image}
@@ -44,9 +43,13 @@ export const Navbar = () => {
               />
             </div>
           ) : (
-            <>
+            <nav className="flex px-5 gap-5 my-5">
+              <Link href="/create" className="">
+                Create Post
+              </Link>
+              <Link href="/submissions">Your Submissions</Link>
               <SignInButton />
-            </>
+            </nav>
           )}
         </div>
       </nav>

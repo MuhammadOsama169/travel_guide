@@ -91,6 +91,13 @@ export default function FormSubmit() {
 
   const content = (
     <section className="flex justify-center flex-col mx-auto">
+      {!session && (
+        <div className="flex ">
+          <span className="flex justify-center text-center font-sans font-semibold text-2xl mx-auto my-5">
+            You must be signed in to create a travel destination!
+          </span>
+        </div>
+      )}
       <Image
         src={createDestinationImg}
         alt="create-destination"

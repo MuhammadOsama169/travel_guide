@@ -1,5 +1,6 @@
 import { PostSkeleton } from '../../components/PostSkeleton';
 import React from 'react';
+import { getServerSession } from 'next-auth';
 
 const getPostData = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/create`, {
@@ -15,11 +16,19 @@ const getPostData = async () => {
 };
 
 export default async function getAllPosts() {
+  const session = await getServerSession();
   try {
     const posts = await getPostData();
 
     return (
       <section>
+        {!session && (
+          <div className="flex ">
+            <span className="flex justify-center text-center font-sans font-semibold text-2xl mx-auto my-5">
+              You too can create your own travel destination. Simply Sign in!
+            </span>
+          </div>
+        )}
         {posts?.map((post, i) => (
           <div key={i}>
             <PostSkeleton
