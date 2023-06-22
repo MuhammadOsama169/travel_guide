@@ -12,7 +12,7 @@ export default function Home() {
       <Image
         src={Line}
         alt="line"
-        className="md:absolute lg:flex h-[250px] md:left-[692px] md:top-[160px] left-[50px] top-[223px] hidden"
+        className="md:absolute lg:flex h-[250px] md:left-[692px] md:top-[180px] left-[50px] top-[223px] hidden"
       />
       <p className="mt-10 md:text-xl text-lg relative text-center">
         Unlock a World of Inspiration with Handcrafted Destination Guides by

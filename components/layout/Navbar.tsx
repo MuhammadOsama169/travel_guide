@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full sm:flex hidden mt-5 items-center">
+      <nav className="w-full sm:flex hidden mt-5 items-center lg:text-lg">
         {/* // Desktop view */}
         <div className="flex md:justify-start justify-center items-center md:ml-10 mx-auto">
           <Link href={'/'}>
@@ -29,7 +29,7 @@ export const Navbar = () => {
         <div className="sm:flex hidden">
           {session?.user ? (
             <div className="flex gap-3 md:gap-5 items-center px-5">
-              <Link href="/submissions">Share✨</Link>
+              <Link href="/submissions">Share your travel destination✨</Link>
               <SignOutButton />
               <Image
                 src={session?.user.image}
@@ -41,7 +41,7 @@ export const Navbar = () => {
             </div>
           ) : (
             <nav className="flex px-5 gap-5 my-5">
-              <Link href="/submissions">Share✨</Link>
+              <Link href="/submissions">Share your travel destination✨</Link>
               <SignInButton />
             </nav>
           )}

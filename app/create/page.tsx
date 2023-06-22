@@ -93,14 +93,39 @@ export default function FormSubmit() {
         onSubmit={handleSubmit}
         className="flex flex-col mx-auto p-6 my-10 bg-[#E8E8E8]  border-gray-200 rounded-xl lg:w-[800px] w-auto"
       >
+        {!session && (
+          <h1 className="text-xl text-center mb-5 text-[#AA4A44]">
+            You must be sign In in to create a travel destination✨. We
+            recommend you sign in through our Home page!
+          </h1>
+        )}
+
         <div className=" flex ">
-          <Image
-            src={session?.user?.image}
-            width={40}
-            height={40}
-            className="rounded-full md:mr-5 mb-5"
-            alt="profile"
-          />
+          {session ? (
+            <Image
+              src={session?.user?.image}
+              width={40}
+              height={40}
+              className="rounded-full md:mr-5 mb-5"
+              alt="profile"
+            />
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-10 h-8 mr-2 mb-2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          )}
+
           <h1 className="lg:text-xl text-xl font-bold align-middle">
             Write a post ✏️{' '}
           </h1>
