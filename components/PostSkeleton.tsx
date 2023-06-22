@@ -21,7 +21,7 @@ export const PostSkeleton = ({ title, content, createdAt, image }: IPROPS) => {
 
   return (
     <section className="flex flex-col mx-auto justify-center align-middle max-w-[1080px]">
-      <div className="mx-auto flex flex-col my-5 rounded-xl lg:w-[800px] w-[400px] p-10 bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
+      <div className="mx-auto flex flex-col my-5 rounded-xl lg:w-[800px] w-[400px] p-10 bg-[#E8E8E8]  border-gray-200">
         <h1 className="text-2xl font-medium font-sans">{title}</h1>
         <h2 className="mt-5">{content}</h2>
         {/* Images container  */}

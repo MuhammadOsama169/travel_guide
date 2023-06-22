@@ -16,8 +16,6 @@ const posts:PostCreateInput[] = [
     'Are you ready to explore the wonders of Cairo? Join me on a journey to discover the ancient pyramids, immerse yourself in the vibrant markets, and unravel the rich history of this captivating city.',
     createdAt: generateRandomDate(),
     image: [
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685216261/pexels-kafeel-ahmed-5106874_pzatuk.jpg',
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261734/cairo-pyramids_mcfqwd.jpg',
       'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261734/cairo_xnfp5k.jpg',
     ],
     id:generateRandomId(),
@@ -29,8 +27,6 @@ const posts:PostCreateInput[] = [
       'Calling all adventurers! Istanbul awaits you with open arms. Let me guide you through the cultural and historical treasures of this enchanting city. From the majestic Hagia Sophia to the bustling Grand Bazaar, every corner of Istanbul holds a story worth exploring.',
     createdAt: generateRandomDate(),
     image: [
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685216264/pexels-julia-volk-6118471_zklcf0.jpg',
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261734/b1178678-hood-209585-16d8b828ee0_emalsa.jpg',
       'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/146_zdrg3m.jpg'
     ],
     id:generateRandomId(),
@@ -43,8 +39,6 @@ const posts:PostCreateInput[] = [
 
     createdAt: generateRandomDate(),
     image: [
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685216262/pexels-ryutaro-tsukata-5473056_jz3xzf.jpg',
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/xian-0_yncjdu.jpg',
       'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/xian_terracotta_warriors_photo_1-a8c6_1400x788_bxpddu.jpg',
     ],
     id:generateRandomId(),
@@ -56,8 +50,6 @@ const posts:PostCreateInput[] = [
 
     createdAt: generateRandomDate(),
     image: [
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685216258/pexels-maria-orlova-4917142_pbipo5.jpg',
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/marseille_miqhnu.jpg',
       'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/marseille-so-attractive-miami-pano_nl7783.jpg'
     ],
     id:generateRandomId(),
@@ -69,8 +61,6 @@ const posts:PostCreateInput[] = [
 
     createdAt: generateRandomDate(),
     image: [
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685216259/pexels-maxim-titov-3848886_y0i6yu.jpg',
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/img-big-almaty-lake_aziqji.jpg',
       'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/Kaindy-Lake-819x1024_hjs4h2.jpg',
     ],
     id:generateRandomId(),
@@ -82,7 +72,6 @@ const posts:PostCreateInput[] = [
     id: generateRandomId(),
     createdAt: generateRandomDate(),
     image: [
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685216264/pexels-julia-volk-6061233_ajzdhp.jpg',
       'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261735/marseille_miqhnu.jpg'
     ],
   },
@@ -93,7 +82,6 @@ const posts:PostCreateInput[] = [
     id: generateRandomId(),
     createdAt: generateRandomDate(),
     image: [
-      'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685216265/pexels-piotr-arnoldes-6771582_dddhtr.jpg',
       'https://res.cloudinary.com/dcxx6ihq2/image/upload/v1685261734/istockphoto-1399883837-612x612_suyctj.jpg'
     ],
 

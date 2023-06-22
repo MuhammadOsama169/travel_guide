@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
@@ -29,10 +29,7 @@ export const Navbar = () => {
         <div className="sm:flex hidden">
           {session?.user ? (
             <div className="flex gap-3 md:gap-5 items-center px-5">
-              <Link href="/create" className="">
-                Create Post
-              </Link>
-              <Link href="/submissions">Your Submissions</Link>
+              <Link href="/submissions">Share✨</Link>
               <SignOutButton />
               <Image
                 src={session?.user.image}
@@ -44,10 +41,7 @@ export const Navbar = () => {
             </div>
           ) : (
             <nav className="flex px-5 gap-5 my-5">
-              <Link href="/create" className="">
-                Create Post
-              </Link>
-              <Link href="/submissions">Your Submissions</Link>
+              <Link href="/submissions">Share✨</Link>
               <SignInButton />
             </nav>
           )}
@@ -103,10 +97,7 @@ export const Navbar = () => {
 
               <div className="flex flex-col text-white justify-center mx-auto items-center text-xl gap-5 pt-10">
                 <Link href={'/'}>Home</Link>
-                <Link href="/create" className="">
-                  Create Post
-                </Link>
-                <Link href="/submissions">Your Submissions</Link>
+                <Link href="/submissions">Share✨</Link>
 
                 {session?.user ? <SignOutButton /> : <SignInButton />}
               </div>

@@ -1,9 +1,7 @@
 'use client';
-
 import { useState, FormEvent } from 'react';
 import { useSession } from 'next-auth/react';
-import placeholderImage from '../../public/placeholder-image.png';
-import createDestinationImg from '../../public/travel-destination.jpg';
+import placeholderImage from '../../public/placeholder-image-removebg.png';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -91,29 +89,22 @@ export default function FormSubmit() {
 
   const content = (
     <section className="flex justify-center flex-col mx-auto">
-      {!session && (
-        <div className="flex ">
-          <span className="flex justify-center text-center font-sans font-semibold text-2xl mx-auto my-5">
-            You must be signed in to create a travel destination!
-          </span>
-        </div>
-      )}
-      <Image
-        src={createDestinationImg}
-        alt="create-destination"
-        className="mx-auto mt-10 lg:w-4/5 w-auto lg:h-[700px] h-auto"
-      />
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col mx-auto max-w-3xl p-6 my-10"
+        className="flex flex-col mx-auto p-6 my-10 bg-[#E8E8E8]  border-gray-200 rounded-xl lg:w-[800px] w-auto"
       >
-        <h1 className="lg:text-5xl text-3xl mb-5 font-bold">
-          Create A Travel Destination
-        </h1>
-
-        <label className="text-2xl mb-1" htmlFor="title">
-          Country & Name of Location
-        </label>
+        <div className=" flex ">
+          <Image
+            src={session?.user?.image}
+            width={40}
+            height={40}
+            className="rounded-full md:mr-5 mb-5"
+            alt="profile"
+          />
+          <h1 className="lg:text-xl text-xl font-bold align-middle">
+            Write a post ✏️{' '}
+          </h1>
+        </div>
         <input
           className="p-3 mb-6 text-xl rounded-2xl text-black"
           type="text"
@@ -126,15 +117,11 @@ export default function FormSubmit() {
           required
         />
 
-        <label className="text-2xl mb-1" htmlFor="content">
-          Description
-        </label>
         <textarea
           className="p-3 mb-6 text-xl rounded-2xl text-black"
           id="content"
           title="content"
-          rows="5"
-          placeholder="Best place for a good time in Moscow ..."
+          placeholder="Share something with TravelGuide ✨"
           value={state.content}
           onChange={handleChange}
           required
@@ -168,12 +155,6 @@ export default function FormSubmit() {
             Upload Image
           </button>
         </div>
-        <p className="mb-5 font-extralight italic">
-          {' '}
-          * Please make sure you upload the image first before submittion!. Your
-          submissions will be displayed in the "Your Submission" section of our
-          website!
-        </p>
         <button
           id="main_form"
           className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 disabled:bg-slate-100 disabled:opacity-50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"

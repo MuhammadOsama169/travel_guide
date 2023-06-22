@@ -1,6 +1,8 @@
+'use client';
 import { PostSkeleton } from '../../components/PostSkeleton';
-import React from 'react';
-import { getServerSession } from 'next-auth';
+import Image from 'next/image';
+import Form from '../create/page';
+import Video from '@/components/Video';
 
 const getPostData = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/create`, {
@@ -16,19 +18,20 @@ const getPostData = async () => {
 };
 
 export default async function getAllPosts() {
-  const session = await getServerSession();
   try {
     const posts = await getPostData();
 
     return (
       <section>
-        {!session && (
-          <div className="flex ">
-            <span className="flex justify-center text-center font-sans font-semibold text-2xl mx-auto my-5">
-              You too can create your own travel destination. Simply Sign in!
-            </span>
-          </div>
-        )}
+        <div className="w-full lg:h-[400px] h-auto">
+          <Video
+            className=""
+            src={`https://res.cloudinary.com/dcxx6ihq2/video/upload/v1687428345/video-bg_at4id5.mp4`}
+            type="video/mp4"
+          />
+        </div>
+
+        <Form />
         {posts?.map((post, i) => (
           <div key={i}>
             <PostSkeleton
