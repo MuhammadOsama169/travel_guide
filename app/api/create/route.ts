@@ -30,6 +30,7 @@ export async function POST(request: Request) {
   }
 }
 
+
 // Get all posts
 export async function GET() {
   try {

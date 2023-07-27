@@ -35,10 +35,10 @@ export default async function getAllPosts() {
         {posts?.map((post, i) => (
           <div key={i}>
             <PostSkeleton
-              title={post.title}
-              content={post.content}
-              createdAt={post.createdAt}
-              image={post.image}
+              title={post?.title}
+              content={post?.content}
+              createdAt={post?.createdAt}
+              image={post?.image}
             />
           </div>
         ))}

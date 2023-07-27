@@ -29,7 +29,7 @@ export const Navbar = () => {
         <div className="sm:flex hidden">
           {session?.user ? (
             <div className="flex gap-3 md:gap-5 items-center px-5">
-              {/* <Link href="/submissions">Share your travel destination✨</Link> */}
+              <Link href="/submissions">Share your travel destination✨</Link>
               <SignOutButton />
               <Image
                 src={session?.user.image}
@@ -41,7 +41,7 @@ export const Navbar = () => {
             </div>
           ) : (
             <nav className="flex px-5 gap-5 my-5">
-              {/* <Link href="/submissions">Share your travel destination✨</Link> */}
+              <Link href="/submissions">Share your travel destination✨</Link>
               <SignInButton />
             </nav>
           )}
@@ -97,7 +97,7 @@ export const Navbar = () => {
 
               <div className="flex flex-col text-white justify-center mx-auto items-center text-xl gap-5 pt-10">
                 <Link href={'/'}>Home</Link>
-                {/* <Link href="/submissions">Share✨</Link> */}
+                <Link href="/submissions">Share✨</Link>
 
                 {session?.user ? <SignOutButton /> : <SignInButton />}
               </div>
